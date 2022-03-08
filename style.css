@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+}
+
+
+#header {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    display: flex;
+    font-size: 3vh;
+    padding-left: 3vw;
+    letter-spacing: 6px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+#todo {
+    padding-left: 2vw;
+}
+
+#middle {
+    display: flex;
+}
+
+#left-column {
+    width: 15vw;
+    background-color: rgb(211, 211, 211);
+    height: 85vh;
+    box-shadow: 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5%;
+    font-size: 1.7vh;
+}
+
+#projects {
+    font-weight: 700;
+    margin-top: 4vh;
+    font-size: 2vh;
+}
+
+.svg-text {
+    display: flex;
+    margin-top: 3vh;
+    width: 75%;
+    border-radius: 10px;
+    padding-left: 1vw;
+    padding-top: 2px;
+}
+
+.svg-text:hover {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25%;
+    width: 85vw;
+    padding-top: 5vh;
+}
+
+.time-span{
+    padding-left: 5%;
+}
+
+#add-project {
+    padding-left: 5%;
+}
+
+#text {
+    font-size: 3vh;
+    font-weight: 700;
+}
+
+#add-task {
+    padding-right: 65%;
+    font-size: 1.7vh;
+}
+
+#task-svg {
+    margin-top: 3vh;
+    width: 25%;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#add-task {
+    float: right;
+}
+
+#task-svg:hover {
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+#footer {
+    background-color: rgb(27, 27, 27);
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vh;
+}
+
+#footer a {
+    color: rgb(211, 211, 211);
+    text-decoration: none;
+}
+
+
+
