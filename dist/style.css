@@ -40,6 +40,7 @@
 #projects {
     font-weight: 700;
     margin-top: 4vh;
+    margin-left: 1vw;
     font-size: 2vh;
 }
 
@@ -89,7 +90,7 @@
     width: 25%;
     border-radius: 10px;
     padding-top: 2px;
-    padding-left: 2px;
+    padding-left: 8px;
 }
 
 #add-task {
@@ -115,6 +116,68 @@
     color: rgb(211, 211, 211);
     text-decoration: none;
 }
+
+.taskscreen {
+    background-color: rgb(211, 211, 211);
+    height: 415px;
+    width: 500px;
+    margin-top: 5vh;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px;
+}
+
+.inputs {
+    display: none;
+    margin-left: 15%;
+    margin-top: -2%;
+    border-radius: 10px;
+    border: solid black 1px;
+    padding-left: 1%;
+    font-size: 2vh;
+}
+
+.text {
+    display: none;
+    margin: 5%;
+    padding-left: 11%;
+    font-size: 1.5vh;
+}
+
+#prioritybox {
+    -webkit-appearance: none;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    width: 6vw;
+}
+
+#prioritybox::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: rgb(27, 27, 27);
+    border-radius: 50%;
+    box-shadow: -210px 0 0 200px rgb(92, 92, 92);
+    cursor: pointer;
+    height: 1.5vh;
+    width: 0.7vw;
+}
+
+#submit {
+    display: none;
+    height: 3vh;
+    width: 5vw;
+    border-radius: 15px;
+    border: solid black 1px;
+    position: absolute;
+    left: 51vw;
+    bottom: 42.5vh;
+}
+
+#submit:hover {
+    background-color: rgb(27, 27, 27);
+    transition: ease-in-out 150ms;
+    color: white;
+    cursor: pointer;
+}
+
 
 
 
