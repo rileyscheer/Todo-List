@@ -68,16 +68,16 @@
                 </svg>
                 <div id="add-task">Add Task</div>
             </div>
-            <form>
+            <form action="#" method="POST">
                 <label for="title" id="title" class="text">Title</label>
-                <input type="text" id="titlebox" class="inputs" name="title"><br>
+                <input type="text" id="titlebox" class="inputs" name="title" required />
                 <label for="desc" id="desc" class="text">Description</label>
-                <input type="text" id="descbox" class="inputs" name="desc"><br>
+                <input type="text" id="descbox" class="inputs" name="desc">
                 <label for="due" id="due" class="text">Due Date</label>
-                <input type="date" id="duebox" class="inputs" name="due"><br>
+                <input type="date" id="duebox" class="inputs" name="due">
                 <label for="priority" id="priority" class="text">Priority</label>
                 <input type="range" id="prioritybox" class="inputs" name="priority" min="0" max="10">
-                <input type="submit" value="Submit" id="submit">
+                <button type="submit" id="submit">Submit</button>
             </form>
         </div>
     </section>
@@ -91,7 +91,7 @@
             1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
           </svg>
     </footer>
-    <script src="/src/modules/variables.js"></script>
+    <script src="../src/modules/variables.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
