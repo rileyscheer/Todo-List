@@ -18,5 +18,9 @@
   "homepage": "https://github.com/rileyscheer/Todo-List#readme",
   "devDependencies": {
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "date-fns": "^2.28.0"
   }
 }
