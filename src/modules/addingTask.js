@@ -16,22 +16,36 @@ function getValues() {
 
 function combineValues(allValues) {
     const addTask = document.createElement('div')
-    addTask.classList.add('allTasks')
+    addTask.classList.add('eachTasks')
     const taskTitle = allValues[0]
     const taskDesc = allValues[1]
     const taskDate = allValues[2]
+    // reformat date
+    const year = taskDate.slice(0, 4);
+    const month = taskDate.slice(5, 7);
+    const day = taskDate.slice(8, 10);
+
     let taskPriority = allValues[3]
 
-    if (taskPriority >= 0 && taskPriority < 4) {
+    if (taskPriority >= 0 && taskPriority < 40) {
         taskPriority = 'Low';
-    }   else if (taskPriority > 3 && taskPriority < 7) {
+        addTask.classList.add('low')
+    }   else if (taskPriority >= 40 && taskPriority < 70) {
         taskPriority = 'Medium';
-    }   else if (taskPriority > 6) {
+        addTask.classList.add('medium')
+    }   else if (taskPriority >= 70) {
         taskPriority = 'High';
+        addTask.classList.add('high')
     }
-    
-    addTask.textContent = `${taskTitle}: \u00A0\u00A0\u00A0\u00A0${taskDesc} \u00A0\u00A0\u00A0\u00A0
-    \u00A0\u00A0Priority: ${taskPriority} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0${taskDate}`;
+
+    if (taskDate === '' && taskDesc === ''){
+        addTask.textContent = taskTitle;
+    }   else if (taskDate === '') {
+        addTask.textContent = `${taskTitle}: \u00A0\u00A0\u00A0\u00A0${taskDesc}`;
+    }   else {
+        addTask.textContent = `${taskTitle}: \u00A0\u00A0\u00A0\u00A0${taskDesc} \u00A0\u00A0\u00A0\u00A0
+        \u00A0\u00A0${month}/${day}/${year}`;
+    }
 
     deleteButton(addTask)
 }
