@@ -185,7 +185,7 @@
     cursor: pointer;
 }
 
-.allTasks {
+.eachTask {
     font-size: 1.7vh;
     background-color: rgb(211, 211, 211);
     width: 62%;
@@ -201,7 +201,6 @@
     height: 2.2vh;
     position: absolute;
     right: 23.3%;
-    margin-top: 0.01vh;
     border-radius: 15px;
     border: black solid 1px;
     background-color: rgb(27, 27, 27);
@@ -209,8 +208,46 @@
 }
 
 .delete:hover {
-    background-color: rgb(109, 0, 0);
+    background-color: white;
+    color: black;
 }
+
+.low {
+    font-size: 1.7vh;
+    background-color: rgb(115, 187, 255);
+    width: 62%;
+    height: 3vh;
+    margin-top: 1.5vh;
+    padding-top: 0.4vh;
+    border-radius: 15px;
+    padding-left: 1vw;
+    border: solid 1px black;
+}
+
+.medium {
+    font-size: 1.7vh;
+    background-color: rgb(255, 217, 93);
+    width: 62%;
+    height: 3vh;
+    margin-top: 1.5vh;
+    padding-top: 0.4vh;
+    border-radius: 15px;
+    padding-left: 1vw;
+    border: solid 1px black;
+}
+
+.high {
+    font-size: 1.7vh;
+    background-color: rgb(255, 76, 76);
+    width: 62%;
+    height: 3vh;
+    margin-top: 1.5vh;
+    padding-top: 0.4vh;
+    border-radius: 15px;
+    padding-left: 1vw;
+    border: solid 1px black;
+}
+
 
 
 
