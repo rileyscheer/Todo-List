@@ -1,6 +1,6 @@
 const inbox = document.querySelector('#inbox');
 const today = document.querySelector('#today');
-const week = document.querySelector('week');
+const week = document.querySelector('#week');
 const month = document.querySelector('#month');
 const text = document.querySelector('#text')
 const project = document.querySelector('#add-project');

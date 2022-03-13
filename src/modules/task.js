@@ -6,6 +6,19 @@ class Tasks {
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.check();
+    }
+
+    check() {
+        if (text === 'Inbox') {
+            InboxTasks.getValues()
+        }   else if (text === 'Today') {
+            TodayTasks.getValues()
+        }   else if (text === 'This Week') {
+            WeekTasks.getValues()
+        }   else if (text === 'This Month') {
+            MonthTasks.getValues()
+        }
     }
 }
 

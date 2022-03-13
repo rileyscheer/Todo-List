@@ -2,21 +2,21 @@ import {InboxTasks, TodayTasks, WeekTasks, MonthTasks} from "./task";
 
 import {Tasks} from "./task";
 
-function getValues() {
-    const taskTitle = titleBox.value;
-    const taskDesc = descBox.value;
-    const taskDate = dateBox.value;
-    const taskPriority = priorityBox.value;
+// function getValues() {
+//     const taskTitle = titleBox.value;
+//     const taskDesc = descBox.value;
+//     const taskDate = dateBox.value;
+//     const taskPriority = priorityBox.value;
 
-    new Tasks(taskTitle, taskDesc, taskDate, taskPriority)
+//     new Tasks(taskTitle, taskDesc, taskDate, taskPriority)
 
-    const newTask = document.createElement('div')
-    newTask.classList.add('eachTask')
-    combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask);
-    resetFields();
-    clearTaskScreen();
-    // taskList.push(newTask);
-}
+//     const newTask = document.createElement('div')
+//     newTask.classList.add('eachTask')
+//     combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask);
+//     resetFields();
+//     clearTaskScreen();
+//     // taskList.push(newTask);
+// }
 
 function combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask) {
     // reformat date
