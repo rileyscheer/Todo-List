@@ -9,7 +9,6 @@ function loadToday() {
 
 function loadWeek() {
     text.textContent = 'This Week';
-    console.log('ran')
 }
 
 function loadMonth() {

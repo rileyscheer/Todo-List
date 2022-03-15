@@ -1,22 +1,5 @@
 import {InboxTasks, TodayTasks, WeekTasks, MonthTasks} from "./task";
 
-import {Tasks} from "./task";
-
-// function getValues() {
-//     const taskTitle = titleBox.value;
-//     const taskDesc = descBox.value;
-//     const taskDate = dateBox.value;
-//     const taskPriority = priorityBox.value;
-
-//     new Tasks(taskTitle, taskDesc, taskDate, taskPriority)
-
-//     const newTask = document.createElement('div')
-//     newTask.classList.add('eachTask')
-//     combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask);
-//     resetFields();
-//     clearTaskScreen();
-//     // taskList.push(newTask);
-// }
 
 function combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask) {
     // reformat date
@@ -98,7 +81,27 @@ function resetFields() {
     priorityBox.value = '';
 }
 
-export {showTaskScreen, combineValues, resetFields, clearTaskScreen, getValues}
+function check() {
+    const taskTitle = titleBox.value;
+    const taskDesc = descBox.value;
+    const taskDate = dateBox.value;
+    const taskPriority = priorityBox.value;
+
+    if (text.textContent === 'Inbox') {
+        const inboxTask = new InboxTasks(taskTitle, taskDesc, taskDate, taskPriority)
+        inboxTask.getValues()
+    }   else if (text.textContent === 'Today') {
+        const todayTask = new TodayTasks(taskTitle, taskDesc, taskDate, taskPriority)
+        todayTask.getValues()
+    }   else if (text.textContent === 'This Week') {
+        const weekTask = new WeekTasks(taskTitle, taskDesc, taskDate, taskPriority)
+        weekTask.getValues()
+    }   else if (text.textContent === 'This Month') {
+        const monthTask = new MonthTasks(taskTitle, taskDesc, taskDate, taskPriority)
+        monthTask.getValues()
+    }
+}
 
 
+export {showTaskScreen, combineValues, resetFields, clearTaskScreen, check}
 
