@@ -5,7 +5,6 @@ const today = document.querySelector('#today');
 const thisWeek = document.querySelector('#week');
 const thisMonth = document.querySelector('#month');
 const text = document.querySelector('#text');
-const project = document.querySelector('#add-project');
 const task = document.querySelector('#add-task');
 const taskSvg = document.querySelector('#task-svg')
 const leftColumn = document.querySelector('#left-column');
