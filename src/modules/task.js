@@ -1,17 +1,6 @@
+/* eslint-disable */ 
 import {combineValues, resetFields, clearTaskScreen} from "./addingTask"
-// import {showInbox, showToday, showWeek, showMonth} from "./toggle"
-
-const titleBox = document.querySelector('#titlebox');
-const descBox = document.querySelector('#descbox');
-const dateBox = document.querySelector('#duebox');
-const priorityBox = document.querySelector('#prioritybox');
-
-let inboxList = []
-let todayList = []
-let weekList = []
-let monthList = []
-
-
+import {showInbox, showToday, showWeek, showMonth} from "./toggle"
 
 class InboxTasks{
     constructor(title, description, dueDate, priority){
@@ -115,97 +104,4 @@ class MonthTasks {
     }
 }
 
-// ------------------------------------------------------------------------------ //
-
-let newInbox = document.createElement('div')
-let newToday = document.createElement('div')
-let newWeek = document.createElement('div')
-let newMonth = document.createElement('div')
-
-
-const inbox = document.querySelector('#inbox');
-const today = document.querySelector('#today');
-const thisWeek = document.querySelector('#week');
-const thisMonth = document.querySelector('#month');
-
-
-
-function showInbox(){
-    for (let i = 0; i < inboxList.length; i++) {
-        inboxList[i].style.display = 'block';
-    }
-}
-
-function showToday(){
-    for (let i = 0; i < todayList.length; i++) {
-        todayList[i].style.display = 'block';
-    }
-}
-
-function showWeek(){
-    for (let i = 0; i < weekList.length; i++) {
-        weekList[i].style.display = 'block';
-    }
-}
-
-function showMonth(){
-    for (let i = 0; i < monthList.length; i++) {
-        monthList[i].style.display = 'block';
-    }
-}
-
-
-
-function hideInbox(){
-    for (let i = 0; i < inboxList.length; i++) {
-        inboxList[i].style.display = 'none';
-    }
-}
-
-function hideToday(){
-    for (let i = 0; i < todayList.length; i++) {
-        todayList[i].style.display = 'none';
-    }
-}
-
-function hideWeek(){
-    for (let i = 0; i < weekList.length; i++) {
-        weekList[i].style.display = 'none';
-    }
-}
-
-function hideMonth(){
-    for (let i = 0; i < monthList.length; i++) {
-        monthList[i].style.display = 'none';
-    }
-}
-
-function hide(){
-    hideInbox()
-    hideToday()
-    hideWeek()
-    hideMonth()
-}
-
-inbox.addEventListener('click', function() {
-    hide()
-    showInbox(newInbox);
-})
-today.addEventListener('click', function() {
-    hide()
-    showToday(newToday)
-})
-thisWeek.addEventListener('click', function(){
-    hide()
-    showWeek(newWeek)
-})
-thisMonth.addEventListener('click', function() {
-    hide()
-    showMonth(newMonth)
-})
-
 export {InboxTasks, TodayTasks, WeekTasks, MonthTasks}
-
-
-
-

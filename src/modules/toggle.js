@@ -1,105 +1,65 @@
-const text = document.querySelector('#text');
+/* eslint-disable */ 
 
-function loadInbox() {
+function showInbox(){
     text.textContent = 'Inbox';
+    for (let i = 0; i < inboxList.length; i++) {
+        inboxList[i].style.display = 'block';
+    }
 }
 
-function loadToday() {
+function showToday(){
     text.textContent = 'Today';
+    for (let i = 0; i < todayList.length; i++) {
+        todayList[i].style.display = 'block';
+    }
 }
 
-function loadWeek() {
+function showWeek(){
     text.textContent = 'This Week';
+    for (let i = 0; i < weekList.length; i++) {
+        weekList[i].style.display = 'block';
+    }
 }
 
-function loadMonth() {
+function showMonth(){
     text.textContent = 'This Month';
+    for (let i = 0; i < monthList.length; i++) {
+        monthList[i].style.display = 'block';
+    }
 }
 
-export {loadInbox, loadToday, loadWeek, loadMonth}
+function hideInbox(){
+    for (let i = 0; i < inboxList.length; i++) {
+        inboxList[i].style.display = 'none';
+    }
+}
 
+function hideToday(){
+    for (let i = 0; i < todayList.length; i++) {
+        todayList[i].style.display = 'none';
+    }
+}
 
-// const inbox = document.querySelector('#inbox');
-// const today = document.querySelector('#today');
-// const thisWeek = document.querySelector('#week');
-// const thisMonth = document.querySelector('#month');
+function hideWeek(){
+    for (let i = 0; i < weekList.length; i++) {
+        weekList[i].style.display = 'none';
+    }
+}
 
-// let newInbox = document.createElement('div')
-// let newToday = document.createElement('div')
-// let newWeek = document.createElement('div')
-// let newMonth = document.createElement('div')
+function hideMonth(){
+    for (let i = 0; i < monthList.length; i++) {
+        monthList[i].style.display = 'none';
+    }
+}
 
+function hide(){
+    hideInbox()
+    hideToday()
+    hideWeek()
+    hideMonth()
+}
 
-
-// inbox.addEventListener('click', function() {
-//     hide()
-//     showInbox(newInbox);
-// })
-// today.addEventListener('click', function() {
-//     hide()
-//     showToday(newToday)
-// })
-// thisWeek.addEventListener('click', function(){
-//     hide()
-//     showWeek(newWeek)
-// })
-// thisMonth.addEventListener('click', function() {
-//     hide()
-//     showMonth(newMonth)
-// })
-
-
-// function showInbox(newInbox){
-//     console.log('show inbox')
-//     newInbox.style.display = 'block';
-//     return newInbox;
-// }
-
-// function showToday(newToday){
-//     console.log('show today')
-//     newToday.style.display = 'block';
-//     return newToday;
-// }
-
-// function showWeek(newWeek){
-//     console.log('show week')
-//     newWeek.style.display = 'block';
-//     return newWeek;
-// }
-
-// function showMonth(newMonth){
-//     console.log('show month')
-//     newMonth.style.display = 'block';
-//     return newMonth;
-// }
-
-
-
-// function hideInbox(newInbox){
-//     console.log('hide inbox')
-//     newInbox.style.display = 'none';
-// }
-
-// function hideToday(newToday){
-//     console.log('hide today')
-//     newToday.style.display = 'none';
-// }
-
-// function hideWeek(newWeek){
-//     console.log('hide week')
-//     newWeek.style.display = 'none';
-// }
-
-// function hideMonth(newMonth){
-//     console.log('hide month')
-//     newMonth.style.display = 'none';
-// }
-
-// function hide(){
-//     hideInbox(newInbox)
-//     hideToday(newToday)
-//     hideWeek(newWeek)
-//     hideMonth(newMonth)
-// }
-
-// export {showInbox, showToday, showWeek, showMonth, loadInbox, loadToday, loadWeek, loadMonth}
+export {showInbox, showToday, showWeek, showMonth,
+        hideInbox, hideToday, hideWeek, hideMonth,
+        hide}
+    

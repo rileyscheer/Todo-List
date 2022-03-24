@@ -1,18 +1,6 @@
-import {InboxTasks, TodayTasks, WeekTasks, MonthTasks} from "./task";
+/* eslint-disable */ 
 
-const text = document.querySelector('#text');
-const taskSvg = document.querySelector('#task-svg')
-const content = document.querySelector('#content');
-const title = document.querySelector('#title');
-const titleBox = document.querySelector('#titlebox');
-const desc = document.querySelector('#desc');
-const descBox = document.querySelector('#descbox');
-const date = document.querySelector('#due');
-const dateBox = document.querySelector('#duebox');
-const priority = document.querySelector('#priority');
-const priorityBox = document.querySelector('#prioritybox');
-const submit = document.querySelector('#submit');
-const taskScreen = document.createElement('div');
+import {InboxTasks, TodayTasks, WeekTasks, MonthTasks} from "./task";
 
 function combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask) {
     // reformat date

@@ -1,5 +1,5 @@
 import {showTaskScreen, check} from "./modules/addingTask.js";
-import {loadInbox, loadToday, loadWeek, loadMonth} from "./modules/toggle.js";
+import {showInbox, showToday, showWeek, showMonth, hide} from "./modules/toggle.js";
 
 const inbox = document.querySelector('#inbox');
 const today = document.querySelector('#today');
@@ -14,10 +14,23 @@ taskScreen.style.display = 'none';
 
 submit.addEventListener('click', check)
 task.addEventListener('click', showTaskScreen)
-inbox.addEventListener('click', loadInbox)
-today.addEventListener('click', loadToday)
-thisWeek.addEventListener('click', loadWeek)
-thisMonth.addEventListener('click', loadMonth)
+
+inbox.addEventListener('click', function() {
+    hide()
+    showInbox();
+})
+today.addEventListener('click', function() {
+    hide()
+    showToday()
+})
+thisWeek.addEventListener('click', function(){
+    hide()
+    showWeek()
+})
+thisMonth.addEventListener('click', function() {
+    hide()
+    showMonth()
+})
 
 
 
