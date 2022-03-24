@@ -1,5 +1,18 @@
 import {InboxTasks, TodayTasks, WeekTasks, MonthTasks} from "./task";
 
+const text = document.querySelector('#text');
+const taskSvg = document.querySelector('#task-svg')
+const content = document.querySelector('#content');
+const title = document.querySelector('#title');
+const titleBox = document.querySelector('#titlebox');
+const desc = document.querySelector('#desc');
+const descBox = document.querySelector('#descbox');
+const date = document.querySelector('#due');
+const dateBox = document.querySelector('#duebox');
+const priority = document.querySelector('#priority');
+const priorityBox = document.querySelector('#prioritybox');
+const submit = document.querySelector('#submit');
+const taskScreen = document.createElement('div');
 
 function combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask) {
     // reformat date
@@ -90,15 +103,19 @@ function check() {
     if (text.textContent === 'Inbox') {
         const inboxTask = new InboxTasks(taskTitle, taskDesc, taskDate, taskPriority)
         inboxTask.getValues()
+        return inboxTask
     }   else if (text.textContent === 'Today') {
         const todayTask = new TodayTasks(taskTitle, taskDesc, taskDate, taskPriority)
         todayTask.getValues()
+        return todayTask
     }   else if (text.textContent === 'This Week') {
         const weekTask = new WeekTasks(taskTitle, taskDesc, taskDate, taskPriority)
         weekTask.getValues()
+        return weekTask
     }   else if (text.textContent === 'This Month') {
         const monthTask = new MonthTasks(taskTitle, taskDesc, taskDate, taskPriority)
         monthTask.getValues()
+        return monthTask
     }
 }
 
