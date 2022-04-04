@@ -6,7 +6,7 @@ const thisWeek = document.querySelector('#week');
 const thisMonth = document.querySelector('#month');
 const text = document.querySelector('#text');
 const task = document.querySelector('#add-task');
-const taskSvg = document.querySelector('#task-svg')
+const taskSvg = document.querySelector('.task-svg')
 const leftColumn = document.querySelector('#left-column');
 const content = document.querySelector('#content');
 const inputs = document.querySelector('.inputs');
@@ -24,6 +24,7 @@ const inboxContainer = document.querySelector('.inboxContainer');
 const todayContainer = document.querySelector('.todayContainer');
 const weekContainer = document.querySelector('.weekContainer');
 const monthContainer = document.querySelector('.monthContainer');
+const slider = document.querySelector('.slider');
 
 let newInbox = document.createElement('div')
 let newToday = document.createElement('div')
@@ -34,3 +35,5 @@ let inboxList = []
 let todayList = []
 let weekList = []
 let monthList = []
+
+let mode = 0;

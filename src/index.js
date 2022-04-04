@@ -2,9 +2,7 @@
 
 import {showTaskScreen, check} from "./modules/addingTask.js";
 import {showInbox, showToday, showWeek, showMonth, hide} from "./modules/toggle.js";
-
-
-taskScreen.style.display = 'none';
+import {night, day} from "./modules/mode.js";
 
 submit.addEventListener('click', check)
 task.addEventListener('click', showTaskScreen)
@@ -26,6 +24,13 @@ thisMonth.addEventListener('click', function() {
     showMonth()
 })
 
-
+slider.addEventListener('click', function() {
+    mode += 1;
+    if (mode % 2 === 1) {
+        night()
+    }   else {
+        day()
+    }
+})
 
 

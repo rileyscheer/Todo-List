@@ -7,7 +7,7 @@ function combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask) {
     const year = taskDate.slice(0, 4);
     const month = taskDate.slice(5, 7);
     const day = taskDate.slice(8, 10);
-    const fullDate = `${month}/${day}/${year}`
+    const fullDate = `${month}/${day}/${year}`;
 
     if (taskPriority >= 0 && taskPriority < 40) {
         taskPriority = 'Low';
@@ -28,6 +28,10 @@ function combineValues(taskTitle, taskDesc, taskDate, taskPriority, newTask) {
         newTask.textContent = `${taskTitle}: \u00A0\u00A0\u00A0\u00A0${taskDesc} \u00A0\u00A0\u00A0\u00A0
         \u00A0\u00A0${fullDate}`;
     }
+
+
+    newTask.style.color = "black";
+
 
     deleteButton(newTask)
 }
