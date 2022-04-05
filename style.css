@@ -8,7 +8,6 @@
 #header {
     background-color: rgb(27, 27, 27);
     color: white;
-    display: flex;
     font-size: 3vh;
     padding-left: 3vw;
     letter-spacing: 6px;
@@ -111,17 +110,33 @@
     width: 100%;
 }
 
-#task-svg {
+.task-svg {
     display: flex;
     position: relative;
     margin-top: 3vh;
     width: 62%;
     border-radius: 10px;
     padding-top: 2px;
+    background-color: white;
 }
 
-#task-svg:hover {
+.task-svg:hover {
     background-color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+.dark {
+    display: flex;
+    position: relative;
+    margin-top: 3vh;
+    width: 62%;
+    border-radius: 10px;
+    padding-top: 2px;
+    background-color: rgb(50, 50, 50);
+}
+
+.dark:hover {
+    background-color: rgb(27, 27, 27);
     cursor: pointer;
 }
 
@@ -269,4 +284,68 @@
     border-radius: 15px;
     padding-left: 1vw;
     border: solid 1px black;
+}
+
+/* Night mode slider */
+
+.day {
+    position: absolute;
+    right: 10.5%;
+}
+
+.night {
+    position: absolute;
+    right: 5.8%;
+}
+
+.switch {
+    position: absolute;
+    left: 90%;
+    width: 60px;
+    height: 34px;
+  }
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(211, 211, 211);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(27, 27, 27);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
